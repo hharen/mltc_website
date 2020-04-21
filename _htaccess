@@ -5,3 +5,7 @@ RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^momslearntocode.com [NC]
+RewriteRule ^(.*)$ http://www.momslearntocode.com/$1 [L,R=301]
